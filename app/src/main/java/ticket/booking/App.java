@@ -19,12 +19,12 @@ public class App {
         System.out.println("Running Train Booking System");
         Scanner scanner = new Scanner(System.in);
         int option = 0;
-        UserBookingService userBookingService;
+        UserBookingService userBookingService = null;
         try{
             userBookingService = new UserBookingService();
         }catch(IOException ex){
-            System.out.println("There is something wrong");
-            return;
+            System.out.println("Failed to initialize booking service: " + ex.getMessage());
+            ex.printStackTrace();
         }
         while(option!=7){
             System.out.println("Choose option");
