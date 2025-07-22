@@ -20,6 +20,10 @@ public class Ticket {
         this.dateOfTravel = dateOfTravel;
         this.train = train;
     }
+//    empty constructor
+    public Ticket(){
+
+    }
 
     //    getters
 //    return ticket info
