@@ -25,6 +25,8 @@ public class UserBookingService {
 //        List<E> -> List is a generic class and E is generic type Parameter
         userList = objectMapper.readValue(users, new TypeReference<List<User>>() {});
     }
+
+//    cancelBooking()  home work
 }
 
 //  User is a class , meaning it can have mulitple objects so inorder to refer we use this keyword
@@ -37,3 +39,5 @@ public class UserBookingService {
 //  deserialization  = taking JSON text and turning into a Java object
 
 //  once we start using static keyword it gets stored in the memory and can be accessed without any creation of object
+
+//why did we declare Optional<User> becuz it can return us null and we also need to handle it to over come the null pointer exception by using isPresent() method

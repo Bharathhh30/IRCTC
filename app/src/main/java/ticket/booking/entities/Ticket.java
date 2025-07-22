@@ -9,4 +9,9 @@ public class Ticket {
     private String destination;
     private Date dateOfTravel;
     private  Train train;
+
+//    return ticket info
+    public String getTicketInfo(){
+        return "";
+    }
 }
