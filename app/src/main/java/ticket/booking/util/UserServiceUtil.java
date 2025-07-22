@@ -1,7 +1,16 @@
 package ticket.booking.util;
 
-public class UserServiceUtil {
+import org.mindrot.jbcrypt.BCrypt;
 
+public class UserServiceUtil {
+//    hashpassword - we pass user password and hash that
+    public static String hashpassword(String plainPassword){
+        return BCrypt.hashpw(plainPassword,BCrypt.gensalt());
+    }
+//    checkpassword  - we take user password as input and hash it and check if it is same or not with the existing hashed password
+    public static boolean checkPassword(String plainPassword, String hashedPassword){
+        return BCrypt.checkpw(plainPassword,hashedPassword);
+    }
 }
 
 
